@@ -1,0 +1,56 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Swagger Todos View service",
+        "description": "This is the Todos View service  For this sample, you can use the api key `special-key` to test the authorization     filters.",
+        "termsOfService": "http:\/\/swagger.io\/terms\/"
+    },
+    "servers": [
+        "http:\/\/todos.swagger.io\/todos"
+    ],
+    "paths": {
+        "\/": {
+            "get": {
+                "summary": "View the list of todos",
+                "description": "",
+                "operationId": "ViewTodos",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Todos"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Todos": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "completed": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            }
+        }
+    }
+}
