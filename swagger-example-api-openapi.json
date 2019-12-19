@@ -1,0 +1,16 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0",
+        "title": "Swagger Example API",
+        "description": "This is a sample server Petstore server.",
+        "termsOfService": "http:\/\/swagger.io\/terms\/"
+    },
+    "servers": [
+        "http:\/\/petstore.swagger.io\/v2"
+    ],
+    "paths": [],
+    "components": {
+        "schemas": []
+    }
+}
