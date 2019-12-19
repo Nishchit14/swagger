@@ -1,0 +1,3578 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Swagger Petstore",
+        "description": "This is a sample server Petstore server.  You can find out more about Swagger at [http:\/\/swagger.io](http:\/\/swagger.io) or on [irc.freenode.net, #swagger](http:\/\/swagger.io\/irc\/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
+        "termsOfService": "http:\/\/swagger.io\/terms\/"
+    },
+    "servers": [
+        "http:\/\/petstore.swagger.io\/v2",
+        "http:\/\/petstore.swagger.io\/api",
+        "http:\/\/petstore.swagger.io\/",
+        "http:\/\/petstore.swagger.io\/v1\/api",
+        "http:\/\/petstore.swagger.io\/v2\/api",
+        "http:\/\/petstore.swagger.io\/v1"
+    ],
+    "paths": {
+        "\/pet": {
+            "post": {
+                "summary": "Add a new pet to the store",
+                "description": "",
+                "operationId": "AddPet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "verbose",
+                        "in": "query",
+                        "description": "Verbose data"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update an existing pet",
+                "description": "",
+                "operationId": "UpdatePet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            }
+        },
+        "\/pet\/findByStatus": {
+            "get": {
+                "summary": "Finds Pets by status",
+                "description": "Multiple status values can be provided with comma separated strings",
+                "operationId": "FindPetsByStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "description": "Status values that need to be considered for filter"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/pet\/findByTags": {
+            "get": {
+                "summary": "Finds Pets by tags",
+                "description": "Muliple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.",
+                "operationId": "FindPetsByTags",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Tags to filter by"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/pet\/{petId}": {
+            "get": {
+                "summary": "Find pet by ID",
+                "description": "Returns a single pet",
+                "operationId": "GetPetById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "petId",
+                        "in": "path",
+                        "description": "ID of pet to return"
+                    },
+                    {
+                        "name": "petName",
+                        "in": "query",
+                        "description": "Name of pet to return"
+                    },
+                    {
+                        "name": "petWeight",
+                        "in": "query",
+                        "description": "Weight of pet to return"
+                    },
+                    {
+                        "name": "bmi",
+                        "in": "query",
+                        "description": "bmi of the pet"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Updates a pet in the store with form data",
+                "description": "",
+                "operationId": "UpdatePetWithForm",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "petId",
+                        "in": "path",
+                        "description": "ID of pet to return"
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Updated name of the pet"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Updated status of the pet"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Deletes a pet",
+                "description": "",
+                "operationId": "DeletePet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "petId",
+                        "in": "path",
+                        "description": "ID of pet to return"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            },
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "put": {
+                "summary": "Update an existing pet",
+                "description": "",
+                "operationId": "UpdatePet",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            }
+        },
+        "\/pet\/{petId}\/uploadImage": {
+            "post": {
+                "summary": "uploads an image",
+                "description": "",
+                "operationId": "UploadFile",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "petId",
+                        "in": "path",
+                        "description": "ID of pet to return"
+                    },
+                    {
+                        "name": "additionalMetadata",
+                        "in": "formData",
+                        "description": "Additional data to pass to server"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "file to upload"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/store\/inventory": {
+            "get": {
+                "summary": "Returns pet inventories by status",
+                "description": "Returns a map of status codes to quantities",
+                "operationId": "GetInventory",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/store\/order": {
+            "post": {
+                "summary": "Place an order for a pet",
+                "description": "",
+                "operationId": "PlaceOrder",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/store\/order\/{orderId}": {
+            "get": {
+                "summary": "Find purchase order by ID",
+                "description": "For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions",
+                "operationId": "GetOrderById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "orderId",
+                        "in": "path",
+                        "description": "ID of pet that needs to be fetched"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete purchase order by ID",
+                "description": "For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors",
+                "operationId": "DeleteOrder",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "orderId",
+                        "in": "path",
+                        "description": "ID of pet that needs to be fetched"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            }
+        },
+        "\/user": {
+            "post": {
+                "summary": "Create user",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "CreateUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "default": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ErrorModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/user\/createWithArray": {
+            "post": {
+                "summary": "Creates list of users with given input array",
+                "description": "",
+                "operationId": "CreateUsersWithArrayInput",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "default": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ErrorModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/user\/createWithList": {
+            "post": {
+                "summary": "Creates list of users with given input array",
+                "description": "",
+                "operationId": "CreateUsersWithListInput",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "default": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ErrorModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/user\/login": {
+            "get": {
+                "summary": "Logs user into the system",
+                "description": "",
+                "operationId": "LoginUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "The user name for login"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "The password for login in clear text"
+                    },
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/user\/logout": {
+            "get": {
+                "summary": "Logs out current logged in user session",
+                "description": "",
+                "operationId": "LogoutUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "default": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ErrorModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/user\/{username}": {
+            "get": {
+                "summary": "Get user by user name",
+                "description": "",
+                "operationId": "GetUserByName",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "description": "The name that needs to be fetched. Use user1 for testing. "
+                    },
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Updated user",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "UpdateUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "description": "The name that needs to be fetched. Use user1 for testing. "
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete user",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "DeleteUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "description": "The name that needs to be fetched. Use user1 for testing. "
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            }
+        },
+        "\/user\/loginStatus": {
+            "get": {
+                "summary": "Logs user into the system",
+                "description": "",
+                "operationId": "LoginStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "The user name for login"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/pets": {
+            "get": {
+                "summary": "",
+                "description": "Returns all pets from the system that the user has access to",
+                "operationId": "FindPets",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Tags to filter by"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "maximum number of results to return"
+                    },
+                    {
+                        "name": "petId",
+                        "in": "path",
+                        "description": "ID of pet to return"
+                    },
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "name values that need to be considered for filter"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "Creates a new pet in the store.  Duplicates are allowed",
+                "operationId": "AddPet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "Header",
+                        "description": "Bearer authorization token"
+                    },
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "How many pets to add to the store"
+                    },
+                    {
+                        "name": "other_price",
+                        "in": "query",
+                        "description": "Price fo each pet"
+                    },
+                    {
+                        "name": "price",
+                        "in": "query",
+                        "description": "Price fo each pet"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "",
+                "description": "Returns all pets from the system that the user has access to",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/pets\/{id}": {
+            "get": {
+                "summary": "",
+                "description": "Returns a user based on a single ID, if the user does not have access to the pet",
+                "operationId": "FindPetById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of pet to fetch"
+                    },
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "",
+                "description": "deletes a single pet based on the ID supplied",
+                "operationId": "DeletePet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of pet to fetch"
+                    },
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "patch": {
+                "summary": "",
+                "description": "Creates a new pet in the store.  Duplicates are allowed",
+                "operationId": "UpdatePet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/pet\/{pet_id}": {
+            "get": {
+                "summary": "Find pet by ID",
+                "description": "Returns a single pet",
+                "operationId": "GetPetById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pet_id",
+                        "in": "path",
+                        "description": "ID of pet to return"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Updates a pet in the store with form data",
+                "description": "",
+                "operationId": "UpdatePetWithForm",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pet_id",
+                        "in": "path",
+                        "description": "ID of pet to return"
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Updated name of the pet"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Updated status of the pet"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Deletes a pet",
+                "description": "",
+                "operationId": "DeletePet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pet_id",
+                        "in": "path",
+                        "description": "ID of pet to return"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            }
+        },
+        "\/pet\/{pet_id}\/uploadImage": {
+            "post": {
+                "summary": "uploads an image",
+                "description": "",
+                "operationId": "UploadFile",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pet_id",
+                        "in": "path",
+                        "description": "ID of pet to return"
+                    },
+                    {
+                        "name": "additionalMetadata",
+                        "in": "formData",
+                        "description": "Additional data to pass to server"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "file to upload"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/new": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "GetNew",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "operationId": "PostNew",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "definitions": {
+            "Pet": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/tests\/requiredParams": {
+            "get": {
+                "summary": "Operation with required parameters",
+                "description": "",
+                "operationId": "RequiredParams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "formData",
+                        "description": "Some required parameter"
+                    },
+                    {
+                        "name": "param2",
+                        "in": "formData",
+                        "description": "Some optional parameter"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/user\/test": {
+            "GET": {
+                "summary": "find user by id",
+                "description": "get user info by user id",
+                "operationId": "Admin",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "query",
+                        "description": "\u7528\u6237\u7f16\u53f7"
+                    }
+                ],
+                "responses": {
+                    "404": {
+                        "description": "Pet not found"
+                    }
+                }
+            }
+        },
+        "\/tool": {
+            "get": {
+                "summary": "Lists a find tool",
+                "description": "you can filter by Muliple id status, name, observation ",
+                "operationId": "FindToolsByStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "idState",
+                        "in": "query",
+                        "description": "Status values that need to be considered for filter"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "name values that need to be considered for filter"
+                    },
+                    {
+                        "name": "observation",
+                        "in": "query",
+                        "description": "observation values that need to be considered for filter"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add a new tool to the system",
+                "description": "",
+                "operationId": "AddPet",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        },
+        "\/tool\/{id}": {
+            "get": {
+                "summary": "Find tool by ID",
+                "description": "Returns a single tool",
+                "operationId": "GetToolById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of pet to fetch"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update an existing tool",
+                "description": "",
+                "operationId": "UpdateTool",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Deletes a tool",
+                "description": "",
+                "operationId": "DeleteTool",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of pet to fetch"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            }
+        },
+        "\/job\/create": {
+            "get": {
+                "summary": "data aviable and necessary for create new job",
+                "description": "Returns states and  tool aviable for register new job",
+                "operationId": "CreateJob",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/job": {
+            "get": {
+                "summary": "Returns jobs with tools by status ",
+                "description": "return list of jobs",
+                "operationId": "ListJob",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "idState",
+                        "in": "query",
+                        "description": "Status values that need to be considered for filter"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "name values that need to be considered for filter"
+                    },
+                    {
+                        "name": "observation",
+                        "in": "query",
+                        "description": "observation values that need to be considered for filter"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a jobs",
+                "description": "send a correct parametres. A new job will be saved in the system",
+                "operationId": "PlaceOrder",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/job\/{id}": {
+            "get": {
+                "summary": "Find job  by ID",
+                "description": "",
+                "operationId": "GetJobId",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of pet to fetch"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "update a jobs",
+                "description": "send a correct parametres. A  job will be updated in the system",
+                "operationId": "UpdateJob",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete job",
+                "description": "For valid response try integer IDs with positive integer value.         Negative or non-integer values will generate API errors",
+                "operationId": "DeleteJob",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of pet to fetch"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            }
+        },
+        "\/user\/create": {
+            "get": {
+                "summary": "data necessary for created a new user",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "RequestCreateUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/user\/{id}": {
+            "get": {
+                "summary": "Get user by user name",
+                "description": "",
+                "operationId": "GetUserByName",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of pet to fetch"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Updated user",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "UpdateUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of pet to fetch"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete user",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "DeleteUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of pet to fetch"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            }
+        },
+        "\/file": {
+            "get": {
+                "summary": "Returns jobs files ",
+                "description": "return list of file",
+                "operationId": "ListFile",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "idJob",
+                        "in": "query",
+                        "description": "job Id to return files list"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create file",
+                "description": "send a correct parametres. A new file will be saved in the system",
+                "operationId": "FileSaved",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/file\/{id}": {
+            "get": {
+                "summary": "Find data file (NOT DONWLOAD)",
+                "description": "",
+                "operationId": "GetInfoFile",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of pet to fetch"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete file",
+                "description": "For valid response try integer IDs with positive integer value.         Negative or non-integer values will generate API errors",
+                "operationId": "DeletedFile",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of pet to fetch"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            }
+        },
+        "\/file\/download\/{id}": {
+            "get": {
+                "summary": "download file",
+                "description": "For valid response try integer IDs with positive integer value.         Negative or non-integer values will generate API errors",
+                "operationId": "DownloadFile",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of pet to fetch"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/thingy": {
+            "post": {
+                "summary": "Create new thingys.",
+                "description": "Adds new thingys to the database, assigning them IDs and setting their last modification date\/time to now.\n",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/health": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/server\/info": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/tests\/localConsumesAndProduces": {
+            "get": {
+                "summary": "Operation with local consumes and produces",
+                "description": "",
+                "operationId": "LocalConsumesAndProduces",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/tests\/globalConsumesAndProduces": {
+            "get": {
+                "summary": "Operation with global consumes and produces",
+                "description": "",
+                "operationId": "GlobalConsumesAndProduces",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/tests\/localResetConsumesAndProduces": {
+            "get": {
+                "summary": "Operation with local consumes and produces set to empty (reset)",
+                "description": "",
+                "operationId": "LocalResetConsumesAndProduces",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/pet\/inventory": {
+            "get": {
+                "summary": "Returns pet inventories by status",
+                "description": "Returns a map of status codes to quantities",
+                "operationId": "GetInventory",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/api\/resource.json": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/pets\/{petId}": {
+            "get": {
+                "summary": "Info for a specific pet",
+                "description": "",
+                "operationId": "ShowPetById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "petId",
+                        "in": "path",
+                        "description": "ID of pet to return"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Updates a pet in the store with form data",
+                "description": "",
+                "operationId": "UpdatePetWithForm",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "petId",
+                        "in": "path",
+                        "description": "ID of pet to return"
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Updated name of the pet"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Updated status of the pet"
+                    },
+                    {
+                        "name": "name",
+                        "in": "form",
+                        "description": "Updated name of the pet"
+                    },
+                    {
+                        "name": "status",
+                        "in": "form",
+                        "description": "Updated status of the pet"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Deletes a pet",
+                "description": "",
+                "operationId": "DeletePet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "petId",
+                        "in": "path",
+                        "description": "ID of pet to return"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            }
+        },
+        "api\/3rd-party": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api\/test1": {
+            "get": {
+                "summary": "Example summary",
+                "description": "Example description...\nMore description...",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api\/test2": {
+            "get": {
+                "summary": "Example summary",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/pi\/{item_name}": {
+            "get": {
+                "summary": "Get protected item",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ErrorModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{id}": {
+            "put": {
+                "summary": "Update user entry",
+                "description": "",
+                "operationId": "UpdateUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of pet to fetch"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Remove user entry",
+                "description": "",
+                "operationId": "DeleteUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of pet to fetch"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "options": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "head": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/volunteers": {
+            "get": {
+                "summary": "Find volunteers list",
+                "description": "Returns volunteers list",
+                "operationId": "GetVolunteersList",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "maximum number of results to return"
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "post": {
+            "description": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "operationId": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "produces": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "responses": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/food": {
+            "get": {
+                "summary": "",
+                "description": "Returns all food from the system that the user has access to",
+                "operationId": "FindFood",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "304": {
+                        "description": "cached response"
+                    }
+                }
+            }
+        },
+        "\/pets\/fixed": {
+            "get": {
+                "summary": "",
+                "description": "Returns all pets from the system that the user has access to",
+                "operationId": "FindPets",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Tags to filter by"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "maximum number of results to return"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "",
+                "description": "Creates a new pet in the store.  Duplicates are allowed",
+                "operationId": "AddPet",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/pets\/{id}\/fixed": {
+            "get": {
+                "summary": "",
+                "description": "Returns all pets from the system that the user has access to",
+                "operationId": "FindPets",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Tags to filter by"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "maximum number of results to return"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/pets\/fixed\/fixed": {
+            "get": {
+                "summary": "",
+                "description": "Returns all pets from the system that the user has access to",
+                "operationId": "FindPets",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Tags to filter by"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "maximum number of results to return"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/agrold\/predicates.xml": {
+            "post": {
+                "summary": "Retrieve complete URI of all predicates used in AgroLD",
+                "description": "No input needed",
+                "operationId": "GetPredicates",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "description": "Status values that need to be considered for filter"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/v1\/images\/creators\/file": {
+            "post": {
+                "summary": "Creates a collection of images using the provided local images",
+                "description": "",
+                "operationId": "ImagesPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "file to upload"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/test": {
+            "get": {
+                "summary": "Check support of unknown additionalProperties",
+                "description": "",
+                "operationId": "CheckSupportOfUnknownAdditionalProperties",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Check support of unknown body",
+                "description": "",
+                "operationId": "CheckSupportOfUnknownBody",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/tests\/withTwoHundredAndDefault": {
+            "get": {
+                "summary": "Operation with several unordered 2XX results and one default",
+                "description": "",
+                "operationId": "WithTwoHundredAndDefault",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "default": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ErrorModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/tests\/withoutTwoHundredButDefault": {
+            "get": {
+                "summary": "Operation with several unordered 2XX results and one default",
+                "description": "",
+                "operationId": "WithoutTwoHundredButDefault",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "default": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ErrorModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/uuid\/{uuidParam}": {
+            "get": {
+                "summary": "test uuid",
+                "description": "",
+                "operationId": "Uuid",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "uuidParam",
+                        "in": "path",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ErrorModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/xet": {
+            "post": {
+                "summary": "xxxxxxxxxxxxxx",
+                "description": "A  simple  API  to  learn  how  to  write  OpenAPI  Specification.\nThis  file  uses  almost  every  single  aspect  of  the  [Open  API  S\npecification](https:\/\/openapis.org\/).    \nThis  API  will  use  JSON.    \nJSON  looks  like  this:    \n```A\n{\n  sdfsdfaf\n    \"key\":  \"value\",\n    \"anotherKey\":  \"anotherValue\"\n}\n",
+                "operationId": "Addxet",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update an existing xet",
+                "description": "",
+                "operationId": "Updatexet",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            }
+        },
+        "\/xet\/findByStatus": {
+            "get": {
+                "summary": "Finds xets by status",
+                "description": "Multiple status values can be provided with comma separated strings",
+                "operationId": "FindxetsByStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "description": "Status values that need to be considered for filter"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/xet\/findByTags": {
+            "get": {
+                "summary": "Finds xets by tags",
+                "description": "Muliple tags can be provided with comma separated strings. Use         tag1, tag2, tag3 for testing.",
+                "operationId": "FindxetsByTags",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Tags to filter by"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/xet\/{xetId}": {
+            "get": {
+                "summary": "Find xet by ID",
+                "description": "Returns a single xet",
+                "operationId": "GetxetById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "xetId",
+                        "in": "path",
+                        "description": "ID of xet to return"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Updates a xet in the store with form data",
+                "description": "",
+                "operationId": "UpdatexetWithForm",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "xetId",
+                        "in": "path",
+                        "description": "ID of xet to return"
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Updated name of the pet"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Updated status of the pet"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Deletes a xet",
+                "description": "",
+                "operationId": "Deletexet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "xetId",
+                        "in": "path",
+                        "description": "ID of xet to return"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            }
+        },
+        "\/xet\/{xetId}\/uploadImage": {
+            "post": {
+                "summary": "uploads an image",
+                "description": "",
+                "operationId": "UploadFile",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "xetId",
+                        "in": "path",
+                        "description": "ID of xet to return"
+                    },
+                    {
+                        "name": "additionalMetadata",
+                        "in": "formData",
+                        "description": "Additional data to pass to server"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "file to upload"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/pets\/findByStatus": {
+            "get": {
+                "summary": "Finds Pets by status",
+                "description": "Multiple status values can be provided with comma seperated strings",
+                "operationId": "FindPetsByStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "description": "Status values that need to be considered for filter"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/pets\/findByTags": {
+            "get": {
+                "summary": "Finds Pets by tags",
+                "description": "Muliple tags can be provided with comma seperated strings. Use tag1, tag2, tag3 for testing.",
+                "operationId": "FindPetsByTags",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Tags to filter by"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/stores\/order": {
+            "post": {
+                "summary": "Place an order for a pet",
+                "description": "",
+                "operationId": "PlaceOrder",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/stores\/order\/{orderId}": {
+            "get": {
+                "summary": "Find purchase order by ID",
+                "description": "For valid response try integer IDs with value <= 5 or > 10. Other values will generated exceptions",
+                "operationId": "GetOrderById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "orderId",
+                        "in": "path",
+                        "description": "ID of pet that needs to be fetched"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete purchase order by ID",
+                "description": "For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors",
+                "operationId": "DeleteOrder",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "orderId",
+                        "in": "path",
+                        "description": "ID of pet that needs to be fetched"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            }
+        },
+        "\/users": {
+            "post": {
+                "summary": "Create user",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "CreateUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "default": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ErrorModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/createWithArray": {
+            "post": {
+                "summary": "Creates list of users with given input array",
+                "description": "",
+                "operationId": "CreateUsersWithArrayInput",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "default": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ErrorModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/createWithList": {
+            "post": {
+                "summary": "Creates list of users with given input array",
+                "description": "",
+                "operationId": "CreateUsersWithListInput",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "default": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ErrorModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/login": {
+            "get": {
+                "summary": "Logs user into the system",
+                "description": "",
+                "operationId": "LoginUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "The user name for login"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "The password for login in clear text"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/logout": {
+            "get": {
+                "summary": "Logs out current logged in user session",
+                "description": "",
+                "operationId": "LogoutUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "default": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ErrorModel"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{username}": {
+            "get": {
+                "summary": "Get user by user name",
+                "description": "",
+                "operationId": "GetUserByName",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "description": "The name that needs to be fetched. Use user1 for testing. "
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Updated user",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "UpdateUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "description": "The name that needs to be fetched. Use user1 for testing. "
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete user",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "DeleteUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "description": "The name that needs to be fetched. Use user1 for testing. "
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Order": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Category ID",
+                        "type": ""
+                    },
+                    "petId": {
+                        "description": "Pet ID",
+                        "type": ""
+                    },
+                    "quantity": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "shipDate": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "Order Status",
+                        "type": "string"
+                    },
+                    "complete": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "pet_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "ship_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "xetId": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "Category": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Category ID",
+                        "type": ""
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "User": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Category ID",
+                        "type": ""
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "firstName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "phone": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "userStatus": {
+                        "description": "User Status",
+                        "type": "integer"
+                    },
+                    "first_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "user_status": {
+                        "description": "User Status",
+                        "type": "integer"
+                    },
+                    "fullName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "code": {
+                        "description": "user's code in university",
+                        "type": "string"
+                    },
+                    "Rol": {
+                        "description": "roles of aplication",
+                        "type": "object"
+                    },
+                    "idRol": {
+                        "description": "send id",
+                        "type": ""
+                    }
+                }
+            },
+            "Tag": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Category ID",
+                        "type": ""
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Pet": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Category ID",
+                        "type": ""
+                    },
+                    "Category": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "category": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "photoUrls": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "tags": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "status": {
+                        "description": "Order Status",
+                        "type": "string"
+                    },
+                    "tag": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "parent_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "sex": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "photo_urls": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "return": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "typeof": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "info": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "dob": {
+                        "description": "",
+                        "type": "date"
+                    },
+                    "price": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "sold": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "friends": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "favoriteNumbers": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "address": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "PetName": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "sub-object": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "another-sub-object": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "nested-sub-objects": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "children": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "child-pet": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "number_of_legs": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "token": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "petType": {
+                        "description": "Type of a pet",
+                        "type": "string"
+                    }
+                }
+            },
+            "photoUrls": {
+                "type": "array"
+            },
+            "tags": {
+                "type": "array"
+            },
+            "ApiResponse": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "UploadResponse": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ImageIds": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "NewPet": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "tag": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ErrorModel": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "error_code": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "photo_urls": {
+                "type": "array"
+            },
+            "Amount": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "description": "some description\n",
+                        "type": "number"
+                    },
+                    "currency": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "currency": {
+                "type": "object"
+            },
+            "GiveNewSchemaNameHere": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            ".\/definitions.json#definitions\/Pet": {
+                "type": "object"
+            },
+            ".\/definitions.json#definitions\/ApiResponse": {
+                "type": "object"
+            },
+            ".\/definitions.json#definitions\/Order": {
+                "type": "object"
+            },
+            ".\/definitions.json#definitions\/User": {
+                "type": "object"
+            },
+            "PetInput": {
+                "type": "object"
+            },
+            "CustomModel": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Tool": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "algorithm": {
+                        "description": "path file where is installed  tool ",
+                        "type": "string"
+                    },
+                    "idState": {
+                        "description": "send only id",
+                        "type": ""
+                    },
+                    "path": {
+                        "description": "name of the tool",
+                        "type": "string"
+                    },
+                    "observation": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "idState": {
+                "type": "object"
+            },
+            "Job": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "observation": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "algorithm": {
+                        "description": "path file where is installed  tool ",
+                        "type": "string"
+                    },
+                    "outPut": {
+                        "description": "name of file to save a output",
+                        "type": "string"
+                    },
+                    "submitCondor": {
+                        "description": "name of file .submit",
+                        "type": "string"
+                    },
+                    "idState": {
+                        "description": "for store send 1",
+                        "type": "integer"
+                    },
+                    "Tool": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "idTool": {
+                        "description": "send id",
+                        "type": ""
+                    }
+                }
+            },
+            "Files": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "realname": {
+                        "description": "this field is the name with was upload",
+                        "type": "string"
+                    },
+                    "fullPath": {
+                        "description": "this field containd the path where is file",
+                        "type": "string"
+                    },
+                    "Job": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "idJob": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "ToolState": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "class": {
+                        "description": "for bootstrap labels",
+                        "type": "string"
+                    }
+                }
+            },
+            "JobState": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "class": {
+                        "description": "for bootstrap labels",
+                        "type": "string"
+                    }
+                }
+            },
+            "Rol": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "observation": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "idState": {
+                        "description": "for store send 1",
+                        "type": "integer"
+                    }
+                }
+            },
+            "Error": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "description": "user's code in university",
+                        "type": "string"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "info": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "photoUrls": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "tags": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "Person": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "firstName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "address": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "properties": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "birthDate": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "float": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "double": {
+                        "description": "",
+                        "type": "number"
+                    }
+                }
+            },
+            "address": {
+                "type": "array",
+                "properties": {
+                    "addressLine1": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "properties": {
+                "type": "object"
+            },
+            "friends": {
+                "type": "array"
+            },
+            "favoriteNumbers": {
+                "type": "array"
+            },
+            "PetName": {
+                "type": "object",
+                "properties": {
+                    "first_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "OldPet": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "sub-object": {
+                "type": "object"
+            },
+            "another-sub-object": {
+                "type": "object"
+            },
+            "nested-sub-objects": {
+                "type": "object"
+            },
+            "children": {
+                "type": "array"
+            },
+            "child-pet": {
+                "type": "object"
+            },
+            "Pets": {
+                "type": "object"
+            },
+            "Child": {
+                "type": "object",
+                "properties": {
+                    "isBaby": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "firstName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ChildWithDocBlocks": {
+                "type": "object",
+                "properties": {
+                    "isBaby": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "firstName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Customer": {
+                "type": "object",
+                "properties": {
+                    "firstName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "tags": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "Customer": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "submittedBy": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "friends": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "Hello": {
+                "type": "object",
+                "properties": {
+                    "greet": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "NestedProperty": {
+                "type": "object",
+                "properties": {
+                    "parentProperty": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "Volunteers": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "gender": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "age": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "phone": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ImageIds": {
+                "type": "array"
+            },
+            ".\/common.jsonPet": {
+                "type": "object"
+            },
+            ".\/common.jsonApiResponse": {
+                "type": "object"
+            },
+            ".\/common.jsonOrder": {
+                "type": "object"
+            },
+            ".\/common.jsonUser": {
+                "type": "object"
+            },
+            "Cat": {
+                "type": "object"
+            },
+            "Dog": {
+                "type": "object"
+            },
+            "HoneyBee": {
+                "type": "object"
+            },
+            "id": {
+                "type": "object"
+            },
+            "xet": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Category": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "category": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "photoUrls": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "tags": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "status": {
+                        "description": "Order Status",
+                        "type": "string"
+                    }
+                }
+            },
+            "PetOrder": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "petId": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "quantity": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "shipDate": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "Order Status",
+                        "type": "string"
+                    },
+                    "complete": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            }
+        }
+    }
+}
