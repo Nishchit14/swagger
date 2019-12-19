@@ -1,0 +1,59 @@
+{
+    "id": "8add1e6562856a8ad1011825d385e790",
+    "name": "OpenAPI Additional Properties",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "05315a1a711585b29ecca7c27ee51456",
+            "name": "Add a new User to the store",
+            "url": "http:\/\/additional-properties.swagger.io\/v2\/user",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8add1e6562856a8ad1011825d385e790",
+            "rawModeData": ""
+        },
+        {
+            "id": "b191e55815b54b996cac8445a2af7512",
+            "name": "Update an existing User",
+            "url": "http:\/\/additional-properties.swagger.io\/v2\/user",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8add1e6562856a8ad1011825d385e790",
+            "rawModeData": ""
+        }
+    ]
+}
