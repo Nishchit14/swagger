@@ -1,0 +1,436 @@
+{
+    "id": "aa0940de8e36c661ac6c6951bde25f59",
+    "name": "GRC Mafazo API Documentation",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "73a07b306924178bc72c42f25eaee131",
+            "name": "Get all systems by query given",
+            "url": "http:\/\/petstore.swagger.io\/v2\/systems",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "The name that needs to be fetched. Use `Organizational NIST RMF System` for testing.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "framework",
+                    "description": "The framework that needs to be fetched. Use `NIST RMF Rev 4` for testing.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "rawModeData": ""
+        },
+        {
+            "id": "c7c90d84cb751036da27f8f85c5b89ea",
+            "name": "Get the last 10 most recent updated systems",
+            "url": "http:\/\/petstore.swagger.io\/v2\/systems\/recentlyModified",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "rawModeData": ""
+        },
+        {
+            "id": "a9740b311c6b269c9b2f63b2b8ecf4e8",
+            "name": "Get the control level status of the system given",
+            "url": "http:\/\/petstore.swagger.io\/v2\/systems\/{name}\/controlLevelStatus",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "Name of system that needs to be fetched",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "rawModeData": ""
+        },
+        {
+            "id": "863b609a77f4310cb58ef73a304211b0",
+            "name": "Get the deficiency register of the system given",
+            "url": "http:\/\/petstore.swagger.io\/v2\/systems\/{name}\/deficiencyRegister",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "Name of system that needs to be fetched",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "rawModeData": ""
+        },
+        {
+            "id": "7ec7cc4cccfc568f89c7c785303e1763",
+            "name": "Get the related assets of the system given",
+            "url": "http:\/\/petstore.swagger.io\/v2\/systems\/{name}\/relatedAssests",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "Name of system that needs to be fetched",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "rawModeData": ""
+        },
+        {
+            "id": "93966a976ca9a5f4b2638b9efb00d0d1",
+            "name": "Get the related policies of the system given",
+            "url": "http:\/\/petstore.swagger.io\/v2\/systems\/{name}\/relatedPolicies",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "Name of system that needs to be fetched",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "rawModeData": ""
+        },
+        {
+            "id": "531965c65e4843bdf35ddf4ff657da93",
+            "name": "Get all vendors by query given",
+            "url": "http:\/\/petstore.swagger.io\/v2\/vendors",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "The name that needs to be fetched. Use `Organizational NIST RMF System` for testing.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "rawModeData": ""
+        },
+        {
+            "id": "eaa023b7a43bfe602fc7e9606e2630bd",
+            "name": "Get the last past due vendors",
+            "url": "http:\/\/petstore.swagger.io\/v2\/vendors\/pastDue",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "rawModeData": ""
+        },
+        {
+            "id": "e476d5a9558c46937399bdfc25be4cce",
+            "name": "Get high risk vendors",
+            "url": "http:\/\/petstore.swagger.io\/v2\/vendors\/highRisk",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "rawModeData": ""
+        },
+        {
+            "id": "16ae50a94a4c2201916080a665a24552",
+            "name": "Get the control level status of the system given",
+            "url": "http:\/\/petstore.swagger.io\/v2\/vendors\/{name}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "Name of system that needs to be fetched",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "rawModeData": ""
+        },
+        {
+            "id": "930e3c1ea0d6e9314ff5452fae0cc70e",
+            "name": "Get all documents",
+            "url": "http:\/\/petstore.swagger.io\/v2\/documents",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "rawModeData": ""
+        },
+        {
+            "id": "656df137c1d5aa21bd848d40f0294314",
+            "name": "Get all attached documents",
+            "url": "http:\/\/petstore.swagger.io\/v2\/documents\/attached",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "rawModeData": ""
+        },
+        {
+            "id": "8c60cb42b3a47cde920b44e5e527fe74",
+            "name": "Get all audits",
+            "url": "http:\/\/petstore.swagger.io\/v2\/audits",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "status",
+                    "description": "Status of audit that needs to be fetched. Use `In Progress` for testing",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "risk_rating",
+                    "description": "Risk rating of audit that needs to be fetched. Use `Moderate` for testing.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "rawModeData": ""
+        },
+        {
+            "id": "b607ddcdfbef1333bad9bead70cd30ed",
+            "name": "Get audit with controls",
+            "url": "http:\/\/petstore.swagger.io\/v2\/audits\/controls",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "rawModeData": ""
+        },
+        {
+            "id": "a2d2ea1d1cc7244abf2ba5e0973d39af",
+            "name": "Get audit with deficiencies",
+            "url": "http:\/\/petstore.swagger.io\/v2\/audits\/deficiencies",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "rawModeData": ""
+        }
+    ]
+}
