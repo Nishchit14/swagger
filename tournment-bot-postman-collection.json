@@ -1,0 +1,36 @@
+{
+    "id": "a4b7e7ec8b935a06afb404bb0ac30def",
+    "name": "Tournment Bot",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "73c8acb34ea8c593f459c01139f1c3e8",
+            "name": "Telegram webhook endpoint",
+            "url": "http:\/\/petstore.swagger.io\/v1\/telegram\/webhook",
+            "description": "See Telegram webhooks [documentation](https:\/\/core.telegram.org\/bots\/webhooks)",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a4b7e7ec8b935a06afb404bb0ac30def",
+            "rawModeData": ""
+        }
+    ]
+}
