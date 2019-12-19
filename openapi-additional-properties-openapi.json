@@ -1,0 +1,57 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "OpenAPI Additional Properties",
+        "description": "This is a test spec",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/additional-properties.swagger.io\/v2"
+    ],
+    "paths": {
+        "\/user": {
+            "post": {
+                "summary": "Add a new User to the store",
+                "description": "",
+                "operationId": "AddUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update an existing User",
+                "description": "",
+                "operationId": "UpdateUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "User": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "userStatus": {
+                        "description": "User Status",
+                        "type": "integer"
+                    }
+                }
+            }
+        }
+    }
+}
