@@ -1,0 +1,90 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Swagger2SampleApiFromJson",
+        "description": "This is a sample for swagger OAS2 document.",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/petstore.swagger.io\/contextJsonV2"
+    ],
+    "paths": {
+        "\/pet\/{petId}": {
+            "get": {
+                "summary": "Find pet by ID",
+                "description": "Returns a single pet",
+                "operationId": "GetPetById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "petId",
+                        "in": "path",
+                        "description": "ID of pet to return"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/xml": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Pet"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Category": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Pet": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Category": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "category": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "photoUrls": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "status": {
+                        "description": "pet status in the store",
+                        "type": "string"
+                    }
+                }
+            },
+            "photoUrls": {
+                "type": "array"
+            }
+        }
+    }
+}
