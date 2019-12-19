@@ -1,0 +1,248 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "SWAP n SWITCH",
+        "description": "Based not only on meeting people, Swap n Switch have your focus on interpersonal relationships that help you both find your true love and make new friends. -- A different social network for those who see a different world.",
+        "termsOfService": "http:\/\/swagger.io\/terms\/"
+    },
+    "servers": [
+        "http:\/\/signup.swagger.io\/v2"
+    ],
+    "paths": {
+        "\/user\/signup": {
+            "post": {
+                "summary": "Sign up action",
+                "description": "",
+                "operationId": "CreateUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Return Welcome screen"
+                    }
+                }
+            }
+        },
+        "\/user\/login": {
+            "post": {
+                "summary": "Gets user into the system",
+                "description": "",
+                "operationId": "UserLogin",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "The username for login"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "The password for login in clear text"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Return Welcome screen"
+                    }
+                }
+            }
+        },
+        "\/user\/id": {
+            "get": {
+                "summary": "User details",
+                "description": "The ID is on query string",
+                "operationId": "ShowUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "id to show"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Return Welcome screen"
+                    }
+                }
+            }
+        },
+        "\/user\/list": {
+            "get": {
+                "summary": "Return all users list",
+                "description": "When using this method, you will get a list of all users.",
+                "operationId": "ShowAll",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Return Welcome screen"
+                    }
+                }
+            }
+        },
+        "\/user\/update": {
+            "put": {
+                "summary": "Updated user",
+                "description": "Make an updte in information user.",
+                "operationId": "UpdateUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "description": "Change and Update informations"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Error during registring"
+                    }
+                }
+            }
+        },
+        "\/user\/delete": {
+            "delete": {
+                "summary": "Deletes a user",
+                "description": "The ID on query String",
+                "operationId": "DeleteUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id to delete"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Return Welcome screen"
+                    }
+                }
+            }
+        },
+        "\/user\/create": {
+            "get": {
+                "summary": "Show create user page",
+                "description": "",
+                "operationId": "UserCreate",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Return Welcome screen"
+                    }
+                }
+            }
+        },
+        "\/user\/detail\/{id}": {
+            "get": {
+                "summary": "User details",
+                "description": "The ID is on query string",
+                "operationId": "DetailUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id to delete"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Return Welcome screen"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a user",
+                "description": "The ID on query String",
+                "operationId": "DeleteUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id to delete"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Return Welcome screen"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Updated user",
+                "description": "Make an updte in information user.",
+                "operationId": "UpdateUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id to delete"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Error during registring"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Show user edit page",
+                "description": "The ID of user is on query string",
+                "operationId": "UserEdit",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id to delete"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Return Welcome screen"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "User": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "phone": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
