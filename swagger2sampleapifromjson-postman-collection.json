@@ -1,0 +1,44 @@
+{
+    "id": "5d943bf337596fffd5c0c23d46f73d69",
+    "name": "Swagger2SampleApiFromJson",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "f795b4a5e6cba8196ed2aa9f85c8a9fb",
+            "name": "Find pet by ID",
+            "url": "http:\/\/petstore.swagger.io\/contextJsonV2\/pet\/{petId}",
+            "description": "Returns a single pet",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "petId",
+                    "description": "ID of pet to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5d943bf337596fffd5c0c23d46f73d69",
+            "rawModeData": ""
+        }
+    ]
+}
