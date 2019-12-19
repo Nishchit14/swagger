@@ -1,0 +1,239 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0",
+        "title": "Petstore Sample API",
+        "description": "A sample API that uses a petstore as an example to demonstrate features in the swagger-2.0 specification",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/petstore.swagger.io\/api"
+    ],
+    "paths": {
+        "\/pet": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "petId",
+                        "in": "path",
+                        "description": "ID of pet to fetch"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "found it",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/User"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "405": {
+                        "description": ""
+                    }
+                }
+            },
+            "$ref": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/user": {
+            "post": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "User": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "lastName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "phone": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "userStatus": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "firstName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Category": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Pet": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "tags": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "Category": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "category": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "photoUrls": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "tags": {
+                "type": "array"
+            },
+            "photoUrls": {
+                "type": "array"
+            },
+            "Tag": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Order": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "orderTag": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "Tag": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "tag": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "petId": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "complete": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "quantity": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "shipDate": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "orderTag": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "NoPropertiesModel": {
+                "type": "object"
+            }
+        }
+    }
+}
