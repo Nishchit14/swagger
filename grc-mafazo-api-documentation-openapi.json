@@ -1,0 +1,777 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "GRC Mafazo API Documentation",
+        "description": "This is the official GRC Documentation.",
+        "termsOfService": "http:\/\/mafazo.com\/terms\/"
+    },
+    "servers": [
+        "http:\/\/petstore.swagger.io\/v2"
+    ],
+    "paths": {
+        "\/systems": {
+            "get": {
+                "summary": "Get all systems by query given",
+                "description": "",
+                "operationId": "GetSystems",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "The name that needs to be fetched. Use `Organizational NIST RMF System` for testing."
+                    },
+                    {
+                        "name": "framework",
+                        "in": "query",
+                        "description": "The framework that needs to be fetched. Use `NIST RMF Rev 4` for testing."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/VendorSummary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/systems\/recentlyModified": {
+            "get": {
+                "summary": "Get the last 10 most recent updated systems",
+                "description": "",
+                "operationId": "GetRecentModifiedSystems",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/VendorSummary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/systems\/{name}\/controlLevelStatus": {
+            "get": {
+                "summary": "Get the control level status of the system given",
+                "description": "",
+                "operationId": "GetControlLevelStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Name of system that needs to be fetched"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/VendorSummary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/systems\/{name}\/deficiencyRegister": {
+            "get": {
+                "summary": "Get the deficiency register of the system given",
+                "description": "",
+                "operationId": "GetDeficiencyRegister",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Name of system that needs to be fetched"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/VendorSummary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/systems\/{name}\/relatedAssests": {
+            "get": {
+                "summary": "Get the related assets of the system given",
+                "description": "",
+                "operationId": "GetRelatedAssets",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Name of system that needs to be fetched"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/VendorSummary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/systems\/{name}\/relatedPolicies": {
+            "get": {
+                "summary": "Get the related policies of the system given",
+                "description": "",
+                "operationId": "GetRelatedPolicies",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Name of system that needs to be fetched"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/VendorSummary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/vendors": {
+            "get": {
+                "summary": "Get all vendors by query given",
+                "description": "",
+                "operationId": "GetVendors",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "The name that needs to be fetched. Use `Organizational NIST RMF System` for testing."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/VendorSummary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/vendors\/pastDue": {
+            "get": {
+                "summary": "Get the last past due vendors",
+                "description": "",
+                "operationId": "GetPastDueVendors",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/VendorSummary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/vendors\/highRisk": {
+            "get": {
+                "summary": "Get high risk vendors",
+                "description": "",
+                "operationId": "GetHighRiskVendors",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/VendorSummary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/vendors\/{name}": {
+            "get": {
+                "summary": "Get the control level status of the system given",
+                "description": "",
+                "operationId": "GetVendorSummaryInfo",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Name of system that needs to be fetched"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/VendorSummary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/documents": {
+            "get": {
+                "summary": "Get all documents",
+                "description": "",
+                "operationId": "GetDocument",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/VendorSummary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/documents\/attached": {
+            "get": {
+                "summary": "Get all attached documents",
+                "description": "",
+                "operationId": "GetAttachedDocument",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/VendorSummary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/audits": {
+            "get": {
+                "summary": "Get all audits",
+                "description": "",
+                "operationId": "GetAudit",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "description": "Status of audit that needs to be fetched. Use `In Progress` for testing"
+                    },
+                    {
+                        "name": "risk_rating",
+                        "in": "query",
+                        "description": "Risk rating of audit that needs to be fetched. Use `Moderate` for testing."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/VendorSummary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/audits\/controls": {
+            "get": {
+                "summary": "Get audit with controls",
+                "description": "",
+                "operationId": "GetAuditControls",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/VendorSummary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/audits\/deficiencies": {
+            "get": {
+                "summary": "Get audit with deficiencies",
+                "description": "",
+                "operationId": "GetAuditDeficiencies",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/VendorSummary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "System": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "framework": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "acronym": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "completion_status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "date_updated": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "date_created": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "RelatedPolicies": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "RelatedAssets": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Vendor": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "address": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "classification": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "inherent_risk": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "residual_risk": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "services": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "contract_expiration_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "last_assessment_date": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "VendorSummary": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "address": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "classification": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "inherent_risk": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "residual_risk": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "services": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "contract_expiration_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "last_assessment_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "controls": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "response": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "attachments": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "controls": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "attachments": {
+                "type": "array"
+            },
+            "Document": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "date_uploaded": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "size": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "attached": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "AttachedDocument": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "date_uploaded": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "size": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "attached_to": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Audit": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "framework": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lead": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "start_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "finish_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "risk_rating": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "AuditControl": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "framework": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lead": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "start_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "finish_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "risk_rating": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "controls": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "response": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "AuditDeficiencies": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "auditor_notes": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "action_statement": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "controls": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            }
+        }
+    }
+}
