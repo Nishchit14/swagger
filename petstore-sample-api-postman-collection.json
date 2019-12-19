@@ -1,0 +1,136 @@
+{
+    "id": "ae15612adf180f4b303ab457cc35cea3",
+    "name": "Petstore Sample API",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "39613b3d559d8a2738a24cca8082fb06",
+            "name": "",
+            "url": "http:\/\/petstore.swagger.io\/api\/pet",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "parameters",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ae15612adf180f4b303ab457cc35cea3",
+            "rawModeData": ""
+        },
+        {
+            "id": "9c22f63fd7cb7ba57ce5a87a2996cf76",
+            "name": "",
+            "url": "http:\/\/petstore.swagger.io\/api\/pet",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "petId",
+                    "description": "ID of pet to fetch",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ae15612adf180f4b303ab457cc35cea3",
+            "rawModeData": ""
+        },
+        {
+            "id": "da3eed663344fed9fc7193fd6b50aeac",
+            "name": "",
+            "url": "http:\/\/petstore.swagger.io\/api\/pet",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ae15612adf180f4b303ab457cc35cea3",
+            "rawModeData": ""
+        },
+        {
+            "id": "81a1eb1961acaf6e178959a971665b5d",
+            "name": "",
+            "url": "http:\/\/petstore.swagger.io\/api\/pet",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "$ref",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ae15612adf180f4b303ab457cc35cea3",
+            "rawModeData": ""
+        },
+        {
+            "id": "44b030e60ff23c72ea0078ac771a48cb",
+            "name": "",
+            "url": "http:\/\/petstore.swagger.io\/api\/user",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ae15612adf180f4b303ab457cc35cea3",
+            "rawModeData": ""
+        }
+    ]
+}
