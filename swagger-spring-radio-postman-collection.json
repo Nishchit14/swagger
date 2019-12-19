@@ -1,0 +1,159 @@
+{
+    "id": "31a0f806e0d273afc456fa69fae325fd",
+    "name": "Swagger Spring Radio",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "c31480a201eb3b683cd10fb26c6f0f57",
+            "name": "Get configurations for the mobile app",
+            "url": "http:\/\/springradio.swagger.io\/v2\/api\/configurations",
+            "description": "The configuration settings is an array of key-value pairs. Following are existing keys:<ul><li>SCHEMA_VERSION<\/li><li>LAST_UPDATED (timestamp)<\/li><li>FORCE_APP_VESION<\/li><li>SPLASH_IMAGE_URL<\/li><li>SPLASH_TEXT<\/li><li>RADIO_URL_IOS<\/li><li>RADIO_URL_ANDROID<\/li><li>VDO_URL_IOS<\/li><li>VDO_URL_ANDROID<\/li><li>BASE_URL<\/li><li>FACEBOOK_URL<\/li><li>YOUTUBE_URL<\/li>",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "31a0f806e0d273afc456fa69fae325fd",
+            "rawModeData": ""
+        },
+        {
+            "id": "82f10a3ec9a6abb03d8baa7c497fa3ea",
+            "name": "Get all active radio programs",
+            "url": "http:\/\/springradio.swagger.io\/v2\/api\/programs",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "31a0f806e0d273afc456fa69fae325fd",
+            "rawModeData": ""
+        },
+        {
+            "id": "864ab7d91e6b0f48dce2a11897cd948b",
+            "name": "Get all advertisements",
+            "url": "http:\/\/springradio.swagger.io\/v2\/api\/advertisements",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "31a0f806e0d273afc456fa69fae325fd",
+            "rawModeData": ""
+        },
+        {
+            "id": "e45b2756e0938ba89c7e2f1d2fc9c4be",
+            "name": "Get all radio program schedules",
+            "url": "http:\/\/springradio.swagger.io\/v2\/api\/schedules",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "31a0f806e0d273afc456fa69fae325fd",
+            "rawModeData": ""
+        },
+        {
+            "id": "e58bb3568727c1aacb83d310c13b5961",
+            "name": "Get all on-demand playbacks of a specific radio program",
+            "url": "http:\/\/springradio.swagger.io\/v2\/api\/playbacks\/{id}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "id of the radio program",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "31a0f806e0d273afc456fa69fae325fd",
+            "rawModeData": ""
+        },
+        {
+            "id": "00e936822118dc20684f664389d6e861",
+            "name": "Get all news headlines",
+            "url": "http:\/\/springradio.swagger.io\/v2\/api\/news",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "31a0f806e0d273afc456fa69fae325fd",
+            "rawModeData": ""
+        }
+    ]
+}
