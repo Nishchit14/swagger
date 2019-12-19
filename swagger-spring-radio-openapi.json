@@ -1,0 +1,238 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Swagger Spring Radio",
+        "description": "This page lists all API interfaces for Spring News Radio mobile app.",
+        "termsOfService": "http:\/\/swagger.io\/terms\/"
+    },
+    "servers": [
+        "http:\/\/springradio.swagger.io\/v2"
+    ],
+    "paths": {
+        "\/api\/configurations": {
+            "get": {
+                "summary": "Get configurations for the mobile app",
+                "description": "The configuration settings is an array of key-value pairs. Following are existing keys:<ul><li>SCHEMA_VERSION<\/li><li>LAST_UPDATED (timestamp)<\/li><li>FORCE_APP_VESION<\/li><li>SPLASH_IMAGE_URL<\/li><li>SPLASH_TEXT<\/li><li>RADIO_URL_IOS<\/li><li>RADIO_URL_ANDROID<\/li><li>VDO_URL_IOS<\/li><li>VDO_URL_ANDROID<\/li><li>BASE_URL<\/li><li>FACEBOOK_URL<\/li><li>YOUTUBE_URL<\/li>",
+                "operationId": "GetConfigurations",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/api\/programs": {
+            "get": {
+                "summary": "Get all active radio programs",
+                "description": "",
+                "operationId": "GetPrograms",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/api\/advertisements": {
+            "get": {
+                "summary": "Get all advertisements",
+                "description": "",
+                "operationId": "GetAdvertisements",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/api\/schedules": {
+            "get": {
+                "summary": "Get all radio program schedules",
+                "description": "",
+                "operationId": "GetSchedules",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/api\/playbacks\/{id}": {
+            "get": {
+                "summary": "Get all on-demand playbacks of a specific radio program",
+                "description": "",
+                "operationId": "GetPlaybacks",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of the radio program"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/api\/news": {
+            "get": {
+                "summary": "Get all news headlines",
+                "description": "",
+                "operationId": "GetNews",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Configuration": {
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "description": "Name of the configuration item",
+                        "type": "string"
+                    },
+                    "value": {
+                        "description": "Value of the configration item",
+                        "type": "string"
+                    }
+                }
+            },
+            "Program": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "title": {
+                        "description": "Name\/title of the radio program",
+                        "type": "string"
+                    },
+                    "photo_url": {
+                        "description": "Path to the logo image of the program",
+                        "type": "string"
+                    }
+                }
+            },
+            "Advertisement": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "image_url": {
+                        "description": "Path to the image of the advertisement",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "(nullable) URL to open the web view in the app when clicking at the advertisement",
+                        "type": "string"
+                    },
+                    "display_order": {
+                        "description": "(nullable) The order to display the advertisement in the app",
+                        "type": "integer"
+                    },
+                    "display_time": {
+                        "description": "(nullable) Time to display the advertisement (in seconds) before rotating to another advertisement",
+                        "type": "integer"
+                    },
+                    "expiry": {
+                        "description": "(nullable) The last date that the advertisement will be displayed on the app",
+                        "type": "string"
+                    }
+                }
+            },
+            "Schedule": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "program_id": {
+                        "description": "id of the radio program",
+                        "type": "integer"
+                    },
+                    "day": {
+                        "description": "Day of the week",
+                        "type": "integer"
+                    },
+                    "time_from": {
+                        "description": "Start time of the radio program",
+                        "type": "string"
+                    },
+                    "time_to": {
+                        "description": "End time of the radio program",
+                        "type": "string"
+                    }
+                }
+            },
+            "Playback": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "program_id": {
+                        "description": "id of the radio program",
+                        "type": "integer"
+                    },
+                    "on_air_date": {
+                        "description": "Date of the original program",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "(nullable) URL to open the web view in the app when clicking at the advertisement",
+                        "type": "string"
+                    }
+                }
+            },
+            "News": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "title": {
+                        "description": "Name\/title of the radio program",
+                        "type": "string"
+                    },
+                    "summary": {
+                        "description": "(nullable) Short summary of the news",
+                        "type": "string"
+                    },
+                    "image_url": {
+                        "description": "Path to the image of the advertisement",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "(nullable) URL to open the web view in the app when clicking at the advertisement",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
