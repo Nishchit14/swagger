@@ -1,0 +1,337 @@
+{
+    "id": "e35c16671004545a998120ca07b69e46",
+    "name": "SWAP n SWITCH",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "78f28393154228f9af624b6214d656f7",
+            "name": "Sign up action",
+            "url": "http:\/\/signup.swagger.io\/v2\/user\/signup",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "rawModeData": ""
+        },
+        {
+            "id": "76d342795633daaeed3f0e960b9163e9",
+            "name": "Gets user into the system",
+            "url": "http:\/\/signup.swagger.io\/v2\/user\/login",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "username",
+                    "description": "The username for login",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "password",
+                    "description": "The password for login in clear text",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "rawModeData": ""
+        },
+        {
+            "id": "48136bcfb959fe8026c7d61d5b360497",
+            "name": "User details",
+            "url": "http:\/\/signup.swagger.io\/v2\/user\/id",
+            "description": "The ID is on query string",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "id to show",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "rawModeData": ""
+        },
+        {
+            "id": "5ef41f611f5d99538bd364466c7db488",
+            "name": "Return all users list",
+            "url": "http:\/\/signup.swagger.io\/v2\/user\/list",
+            "description": "When using this method, you will get a list of all users.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "rawModeData": ""
+        },
+        {
+            "id": "4b5db30a0f7a1ca03a3e6b01bb8fa781",
+            "name": "Updated user",
+            "url": "http:\/\/signup.swagger.io\/v2\/user\/update",
+            "description": "Make an updte in information user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "username",
+                    "description": "Change and Update informations",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "rawModeData": ""
+        },
+        {
+            "id": "b1ed8200fec3aa15aa733f9a5efaca22",
+            "name": "Deletes a user",
+            "url": "http:\/\/signup.swagger.io\/v2\/user\/delete",
+            "description": "The ID on query String",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "User id to delete",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "rawModeData": ""
+        },
+        {
+            "id": "e60ccd1739f69e7f7985a36346209303",
+            "name": "Show create user page",
+            "url": "http:\/\/signup.swagger.io\/v2\/user\/create",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "rawModeData": ""
+        },
+        {
+            "id": "8c5d714ddbb0df09e86ad629f0588aa0",
+            "name": "User details",
+            "url": "http:\/\/signup.swagger.io\/v2\/user\/detail\/{id}",
+            "description": "The ID is on query string",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "User id to delete",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "rawModeData": ""
+        },
+        {
+            "id": "dda33a1d25e1ad7203b3981c7d8bace4",
+            "name": "Delete a user",
+            "url": "http:\/\/signup.swagger.io\/v2\/user\/detail\/{id}",
+            "description": "The ID on query String",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "User id to delete",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "rawModeData": ""
+        },
+        {
+            "id": "e8df0d978e68f297b37a98378c06773f",
+            "name": "Updated user",
+            "url": "http:\/\/signup.swagger.io\/v2\/user\/detail\/{id}",
+            "description": "Make an updte in information user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "User id to delete",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "rawModeData": ""
+        },
+        {
+            "id": "cbba50205553e1be60ea3ea29ece94e1",
+            "name": "Show user edit page",
+            "url": "http:\/\/signup.swagger.io\/v2\/user\/detail\/{id}",
+            "description": "The ID of user is on query string",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "User id to delete",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "rawModeData": ""
+        }
+    ]
+}
