@@ -1,0 +1,1142 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Tournment Bot",
+        "description": "This is the API to the Tournment Bot, now only supporting [Telegram Bot Webhooks](https:\/\/core.telegram.org\/bots\/webhooks).",
+        "termsOfService": "http:\/\/swagger.io\/terms\/"
+    },
+    "servers": [
+        "http:\/\/petstore.swagger.io\/v1"
+    ],
+    "paths": {
+        "\/telegram\/webhook": {
+            "post": {
+                "summary": "Telegram webhook endpoint",
+                "description": "See Telegram webhooks [documentation](https:\/\/core.telegram.org\/bots\/webhooks)",
+                "operationId": "TelegramWebhook",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Result",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "TelegramMessage": {
+                "type": "object",
+                "properties": {
+                    "message_id": {
+                        "description": "Unique message identifier inside this chat",
+                        "type": "integer"
+                    },
+                    "from": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "date": {
+                        "description": "Date the message was sent in Unix time",
+                        "type": "integer"
+                    },
+                    "chat": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "forward_from": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "forward_from_chat": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "forward_from_message_id": {
+                        "description": "For messages forwarded from channels, identifier of the original message in the channel",
+                        "type": "integer"
+                    },
+                    "forward_signature": {
+                        "description": "For messages forwarded from channels, signature of the post author if present",
+                        "type": "string"
+                    },
+                    "forward_date": {
+                        "description": "For forwarded messages, date the original message was sent in Unix time",
+                        "type": "integer"
+                    },
+                    "TelegramMessage": {
+                        "description": "This object represents a message.",
+                        "type": "object"
+                    },
+                    "reply_to_message": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "edit_date": {
+                        "description": "Date the message was last edited in Unix time",
+                        "type": "integer"
+                    },
+                    "media_group_id": {
+                        "description": "The unique identifier of a media message group this message belongs to",
+                        "type": "string"
+                    },
+                    "author_signature": {
+                        "description": "Signature of the post author for messages in channels",
+                        "type": "string"
+                    },
+                    "text": {
+                        "description": "For text messages, the actual UTF-8 text of the message, 0-4096 characters.",
+                        "type": "string"
+                    },
+                    "entities": {
+                        "description": "For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the text",
+                        "type": "array"
+                    },
+                    "caption_entities": {
+                        "description": "For messages with a caption, special entities like usernames, URLs, bot commands, etc. that appear in the caption",
+                        "type": "array"
+                    },
+                    "audio": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "document": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "game": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "photo": {
+                        "description": "Message is a photo, available sizes of the photo",
+                        "type": "array"
+                    },
+                    "sticker": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "video": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "voice": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "video_note": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "caption": {
+                        "description": "Caption for the audio, document, photo, video or voice, 0-200 characters",
+                        "type": "string"
+                    },
+                    "contact": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "location": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "venue": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "new_chat_members": {
+                        "description": "New members that were added to the group or supergroup and information about them (the bot itself may be one of these members)",
+                        "type": "array"
+                    },
+                    "left_chat_member": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "new_chat_title": {
+                        "description": "A chat title was changed to this value",
+                        "type": "string"
+                    },
+                    "new_chat_photo": {
+                        "description": "A chat photo was change to this value",
+                        "type": "array"
+                    },
+                    "delete_chat_photo": {
+                        "description": "Service message: the chat photo was deleted",
+                        "type": "boolean"
+                    },
+                    "group_chat_created": {
+                        "description": "Service message: the group has been created",
+                        "type": "boolean"
+                    },
+                    "supergroup_chat_created": {
+                        "description": "Service message: the supergroup has been created. This field can\u2018t be received in a message coming through updates, because bot can\u2019t be a member of a supergroup when it is created. It can only be found in reply_to_message if someone replies to a very first message in a directly created supergroup.",
+                        "type": "boolean"
+                    },
+                    "channel_chat_created": {
+                        "description": "Service message: the channel has been created. This field can\u2018t be received in a message coming through updates, because bot can\u2019t be a member of a channel when it is created. It can only be found in reply_to_message if someone replies to a very first message in a channel.",
+                        "type": "boolean"
+                    },
+                    "migrate_to_chat_id": {
+                        "description": "The group has been migrated to a supergroup with the specified identifier. This number may be greater than 32 bits and some programming languages may have difficulty\/silent defects in interpreting it. But it is smaller than 52 bits, so a signed 64 bit integer or double-precision float type are safe for storing this identifier.",
+                        "type": "integer"
+                    },
+                    "migrate_from_chat_id": {
+                        "description": "The supergroup has been migrated from a group with the specified identifier. This number may be greater than 32 bits and some programming languages may have difficulty\/silent defects in interpreting it. But it is smaller than 52 bits, so a signed 64 bit integer or double-precision float type are safe for storing this identifier.",
+                        "type": "integer"
+                    },
+                    "pinned_message": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "invoice": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "successful_payment": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "connected_website": {
+                        "description": "The domain name of the website on which the user has logged in.",
+                        "type": "string"
+                    }
+                }
+            },
+            "from": {
+                "type": "object"
+            },
+            "chat": {
+                "type": "object"
+            },
+            "forward_from": {
+                "type": "object"
+            },
+            "forward_from_chat": {
+                "type": "object"
+            },
+            "entities": {
+                "type": "array"
+            },
+            "caption_entities": {
+                "type": "array"
+            },
+            "audio": {
+                "type": "object"
+            },
+            "document": {
+                "type": "object"
+            },
+            "game": {
+                "type": "object"
+            },
+            "photo": {
+                "type": "object"
+            },
+            "sticker": {
+                "type": "object"
+            },
+            "video": {
+                "type": "object"
+            },
+            "voice": {
+                "type": "object"
+            },
+            "video_note": {
+                "type": "object"
+            },
+            "contact": {
+                "type": "object"
+            },
+            "location": {
+                "type": "object"
+            },
+            "venue": {
+                "type": "object"
+            },
+            "new_chat_members": {
+                "type": "array"
+            },
+            "left_chat_member": {
+                "type": "object"
+            },
+            "new_chat_photo": {
+                "type": "array"
+            },
+            "invoice": {
+                "type": "object"
+            },
+            "successful_payment": {
+                "type": "object"
+            },
+            "TelegramMessageEntity": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "description": "Type of the entity. Can be mention (@username), hashtag, bot_command, url, email, bold (bold text), italic (italic text), code (monowidth string), pre (monowidth block), text_link (for clickable text URLs), text_mention (for users without usernames)",
+                        "type": "string"
+                    },
+                    "offset": {
+                        "description": "Offset in UTF-16 code units to the start of the entity",
+                        "type": "integer"
+                    },
+                    "length": {
+                        "description": "Length of the entity in UTF-16 code units",
+                        "type": "integer"
+                    },
+                    "url": {
+                        "description": "For \u201ctext_link\u201d only, url that will be opened after user taps on the text",
+                        "type": "string"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "user": {
+                "type": "object"
+            },
+            "TelegramUser": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Unique identifier for this user or bot",
+                        "type": "integer"
+                    },
+                    "is_bot": {
+                        "description": "True, if this user is a bot",
+                        "type": "boolean"
+                    },
+                    "first_name": {
+                        "description": "User\u2018s or bot\u2019s first name",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "User\u2018s or bot\u2019s last name",
+                        "type": "string"
+                    },
+                    "username": {
+                        "description": "User\u2018s or bot\u2019s username",
+                        "type": "string"
+                    },
+                    "language_code": {
+                        "description": "IETF language tag of the user's language",
+                        "type": "string"
+                    }
+                }
+            },
+            "TelegramChat": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Unique identifier for this user or bot",
+                        "type": "integer"
+                    },
+                    "type": {
+                        "description": "Type of the entity. Can be mention (@username), hashtag, bot_command, url, email, bold (bold text), italic (italic text), code (monowidth string), pre (monowidth block), text_link (for clickable text URLs), text_mention (for users without usernames)",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "Title, for supergroups, channels and group chats",
+                        "type": "string"
+                    },
+                    "username": {
+                        "description": "User\u2018s or bot\u2019s username",
+                        "type": "string"
+                    },
+                    "first_name": {
+                        "description": "User\u2018s or bot\u2019s first name",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "User\u2018s or bot\u2019s last name",
+                        "type": "string"
+                    },
+                    "all_members_are_administrators": {
+                        "description": "True if a group has \u2018All Members Are Admins\u2019 enabled.",
+                        "type": "boolean"
+                    },
+                    "photo": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "description": {
+                        "description": "Description, for supergroups and channel chats. Returned only in getChat.",
+                        "type": "string"
+                    },
+                    "invite_link": {
+                        "description": "Chat invite link, for supergroups and channel chats. Returned only in getChat.",
+                        "type": "string"
+                    },
+                    "TelegramMessage": {
+                        "description": "This object represents a message.",
+                        "type": "object"
+                    },
+                    "pinned_message": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "sticker_set_name": {
+                        "description": "For supergroups, name of group sticker set. Returned only in getChat.",
+                        "type": "string"
+                    },
+                    "can_set_sticker_set": {
+                        "description": "True, if the bot can change the group sticker set. Returned only in getChat.",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "TelegramChatPhoto": {
+                "type": "object",
+                "properties": {
+                    "small_file_id": {
+                        "description": "Unique file identifier of small (160x160) chat photo. This file_id can be used only for photo download.",
+                        "type": "string"
+                    },
+                    "big_file_id": {
+                        "description": "Unique file identifier of big (640x640) chat photo. This file_id can be used only for photo download.",
+                        "type": "string"
+                    }
+                }
+            },
+            "TelegramUpdate": {
+                "type": "object",
+                "properties": {
+                    "update_id": {
+                        "description": "The update\u2018s unique identifier. Update identifiers start from a certain positive number and increase sequentially. This ID becomes especially handy if you\u2019re using Webhooks, since it allows you to ignore repeated updates or to restore the correct update sequence, should they get out of order. If there are no new updates for at least a week, then identifier of the next update will be chosen randomly instead of sequentially.",
+                        "type": "integer"
+                    },
+                    "TelegramMessage": {
+                        "description": "This object represents a message.",
+                        "type": "object"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "edited_message": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "channel_post": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "edited_channel_post": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "inline_query": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "chosen_inline_result": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "callback_query": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "shipping_query": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "pre_checkout_query": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "inline_query": {
+                "type": "object"
+            },
+            "chosen_inline_result": {
+                "type": "object"
+            },
+            "callback_query": {
+                "type": "object"
+            },
+            "shipping_query": {
+                "type": "object"
+            },
+            "pre_checkout_query": {
+                "type": "object"
+            },
+            "TelegramAudio": {
+                "type": "object",
+                "properties": {
+                    "file_id": {
+                        "description": "Unique identifier for this file",
+                        "type": "string"
+                    },
+                    "duration": {
+                        "description": "Duration of the audio in seconds as defined by sender",
+                        "type": "integer"
+                    },
+                    "performer": {
+                        "description": "Performer of the audio as defined by sender or by audio tags",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "Title, for supergroups, channels and group chats",
+                        "type": "string"
+                    },
+                    "mime_type": {
+                        "description": "MIME type of the file as defined by sender",
+                        "type": "string"
+                    },
+                    "file_size": {
+                        "description": "File size",
+                        "type": "integer"
+                    }
+                }
+            },
+            "TelegramDocument": {
+                "type": "object",
+                "properties": {
+                    "file_id": {
+                        "description": "Unique identifier for this file",
+                        "type": "string"
+                    },
+                    "thumb": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "file_name": {
+                        "description": "Original filename as defined by sender",
+                        "type": "string"
+                    },
+                    "mime_type": {
+                        "description": "MIME type of the file as defined by sender",
+                        "type": "string"
+                    },
+                    "file_size": {
+                        "description": "File size",
+                        "type": "integer"
+                    }
+                }
+            },
+            "thumb": {
+                "type": "object"
+            },
+            "TelegramPhotoSize": {
+                "type": "object",
+                "properties": {
+                    "file_id": {
+                        "description": "Unique identifier for this file",
+                        "type": "string"
+                    },
+                    "width": {
+                        "description": "Photo width",
+                        "type": "integer"
+                    },
+                    "height": {
+                        "description": "Photo height",
+                        "type": "integer"
+                    },
+                    "file_size": {
+                        "description": "File size",
+                        "type": "integer"
+                    }
+                }
+            },
+            "TelegramVideo": {
+                "type": "object",
+                "properties": {
+                    "file_id": {
+                        "description": "Unique identifier for this file",
+                        "type": "string"
+                    },
+                    "width": {
+                        "description": "Photo width",
+                        "type": "integer"
+                    },
+                    "height": {
+                        "description": "Photo height",
+                        "type": "integer"
+                    },
+                    "duration": {
+                        "description": "Duration of the audio in seconds as defined by sender",
+                        "type": "integer"
+                    },
+                    "TelegramPhotoSize": {
+                        "description": "This object represents one size of a photo or a file \/ sticker thumbnail.",
+                        "type": "object"
+                    },
+                    "thumb": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "mime_type": {
+                        "description": "MIME type of the file as defined by sender",
+                        "type": "string"
+                    },
+                    "file_size": {
+                        "description": "File size",
+                        "type": "integer"
+                    }
+                }
+            },
+            "TelegramVoice": {
+                "type": "object",
+                "properties": {
+                    "file_id": {
+                        "description": "Unique identifier for this file",
+                        "type": "string"
+                    },
+                    "duration": {
+                        "description": "Duration of the audio in seconds as defined by sender",
+                        "type": "integer"
+                    },
+                    "mime_type": {
+                        "description": "MIME type of the file as defined by sender",
+                        "type": "string"
+                    },
+                    "file_size": {
+                        "description": "File size",
+                        "type": "integer"
+                    }
+                }
+            },
+            "TelegramVideoNote": {
+                "type": "object",
+                "properties": {
+                    "file_id": {
+                        "description": "Unique identifier for this file",
+                        "type": "string"
+                    },
+                    "length": {
+                        "description": "Length of the entity in UTF-16 code units",
+                        "type": "integer"
+                    },
+                    "duration": {
+                        "description": "Duration of the audio in seconds as defined by sender",
+                        "type": "integer"
+                    },
+                    "TelegramPhotoSize": {
+                        "description": "This object represents one size of a photo or a file \/ sticker thumbnail.",
+                        "type": "object"
+                    },
+                    "thumb": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "file_size": {
+                        "description": "File size",
+                        "type": "integer"
+                    }
+                }
+            },
+            "TelegramContact": {
+                "type": "object",
+                "properties": {
+                    "phone_number": {
+                        "description": "Contact's phone number",
+                        "type": "string"
+                    },
+                    "first_name": {
+                        "description": "User\u2018s or bot\u2019s first name",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "User\u2018s or bot\u2019s last name",
+                        "type": "string"
+                    },
+                    "user_id": {
+                        "description": "Contact's user identifier in Telegram",
+                        "type": "integer"
+                    }
+                }
+            },
+            "TelegramLocation": {
+                "type": "object",
+                "properties": {
+                    "longitude": {
+                        "description": "Longitude as defined by sender",
+                        "type": "number"
+                    },
+                    "latitude": {
+                        "description": "Longitude as defined by sender",
+                        "type": "number"
+                    }
+                }
+            },
+            "TelegramVenue": {
+                "type": "object",
+                "properties": {
+                    "TelegramLocation": {
+                        "description": "This object represents a point on the map.",
+                        "type": "object"
+                    },
+                    "location": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "title": {
+                        "description": "Title, for supergroups, channels and group chats",
+                        "type": "string"
+                    },
+                    "address": {
+                        "description": "Address of the venue",
+                        "type": "string"
+                    },
+                    "foursquare_id": {
+                        "description": "Foursquare identifier of the venue",
+                        "type": "string"
+                    }
+                }
+            },
+            "TelegramSticker": {
+                "type": "object",
+                "properties": {
+                    "file_id": {
+                        "description": "Unique identifier for this file",
+                        "type": "string"
+                    },
+                    "width": {
+                        "description": "Photo width",
+                        "type": "integer"
+                    },
+                    "height": {
+                        "description": "Photo height",
+                        "type": "integer"
+                    },
+                    "TelegramPhotoSize": {
+                        "description": "This object represents one size of a photo or a file \/ sticker thumbnail.",
+                        "type": "object"
+                    },
+                    "thumb": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "emoji": {
+                        "description": "Emoji associated with the sticker",
+                        "type": "string"
+                    },
+                    "set_name": {
+                        "description": "Name of the sticker set to which the sticker belongs",
+                        "type": "string"
+                    },
+                    "mask_position": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "file_size": {
+                        "description": "File size",
+                        "type": "integer"
+                    }
+                }
+            },
+            "mask_position": {
+                "type": "object"
+            },
+            "TelegramMaskPosition": {
+                "type": "object",
+                "properties": {
+                    "point": {
+                        "description": "The part of the face relative to which the mask should be placed. One of \u201cforehead\u201d, \u201ceyes\u201d, \u201cmouth\u201d, or \u201cchin\u201d.",
+                        "type": "string"
+                    },
+                    "x_shift": {
+                        "description": "Shift by X-axis measured in widths of the mask scaled to the face size, from left to right. For example, choosing -1.0 will place mask just to the left of the default mask position.",
+                        "type": "number"
+                    },
+                    "y_shift": {
+                        "description": "Shift by Y-axis measured in heights of the mask scaled to the face size, from top to bottom. For example, 1.0 will place the mask just below the default mask position.",
+                        "type": "number"
+                    },
+                    "scale": {
+                        "description": "Mask scaling coefficient. For example, 2.0 means double size.",
+                        "type": "number"
+                    },
+                    "zoom": {
+                        "description": "Mask scaling coefficient. For example, 2.0 means double size.",
+                        "type": "number"
+                    }
+                }
+            },
+            "TelegramGame": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "description": "Title, for supergroups, channels and group chats",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "Description, for supergroups and channel chats. Returned only in getChat.",
+                        "type": "string"
+                    },
+                    "photo": {
+                        "description": "Message is a photo, available sizes of the photo",
+                        "type": "array"
+                    },
+                    "text": {
+                        "description": "For text messages, the actual UTF-8 text of the message, 0-4096 characters.",
+                        "type": "string"
+                    },
+                    "text_entities": {
+                        "description": "Special entities that appear in text, such as usernames, URLs, bot commands, etc.",
+                        "type": "array"
+                    },
+                    "animation": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "text_entities": {
+                "type": "array"
+            },
+            "animation": {
+                "type": "object"
+            },
+            "TelegramAnimation": {
+                "type": "object",
+                "properties": {
+                    "file_id": {
+                        "description": "Unique identifier for this file",
+                        "type": "string"
+                    },
+                    "TelegramPhotoSize": {
+                        "description": "This object represents one size of a photo or a file \/ sticker thumbnail.",
+                        "type": "object"
+                    },
+                    "thumb": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "file_name": {
+                        "description": "Original filename as defined by sender",
+                        "type": "string"
+                    },
+                    "mime_type": {
+                        "description": "MIME type of the file as defined by sender",
+                        "type": "string"
+                    },
+                    "file_size": {
+                        "description": "File size",
+                        "type": "integer"
+                    }
+                }
+            },
+            "TelegramInvoice": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "description": "Title, for supergroups, channels and group chats",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "Description, for supergroups and channel chats. Returned only in getChat.",
+                        "type": "string"
+                    },
+                    "start_parameter": {
+                        "description": "Unique bot deep-linking parameter that can be used to generate this invoice",
+                        "type": "string"
+                    },
+                    "currency": {
+                        "description": "Three-letter ISO 4217 currency code",
+                        "type": "string"
+                    },
+                    "total_amount": {
+                        "description": "Total price in the smallest units of the currency (integer, not float\/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+                        "type": "integer"
+                    }
+                }
+            },
+            "TelegramSuccessfulPayment": {
+                "type": "object",
+                "properties": {
+                    "currency": {
+                        "description": "Three-letter ISO 4217 currency code",
+                        "type": "string"
+                    },
+                    "total_amount": {
+                        "description": "Total price in the smallest units of the currency (integer, not float\/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+                        "type": "integer"
+                    },
+                    "invoice_payload": {
+                        "description": "Bot specified invoice payload",
+                        "type": "string"
+                    },
+                    "shipping_option_id": {
+                        "description": "Identifier of the shipping option chosen by the user",
+                        "type": "string"
+                    },
+                    "order_info": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "telegram_payment_charge_id": {
+                        "description": "Telegram payment identifier",
+                        "type": "string"
+                    },
+                    "provider_payment_charge_id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "order_info": {
+                "type": "object"
+            },
+            "TelegramOrderInfo": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "User name",
+                        "type": "string"
+                    },
+                    "phone_number": {
+                        "description": "Contact's phone number",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "User email",
+                        "type": "string"
+                    },
+                    "shipping_address": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "shipping_address": {
+                "type": "object"
+            },
+            "TelegramShippingAddress": {
+                "type": "object",
+                "properties": {
+                    "country_code": {
+                        "description": "ISO 3166-1 alpha-2 country code",
+                        "type": "string"
+                    },
+                    "stat": {
+                        "description": "State, if applicable",
+                        "type": "string"
+                    },
+                    "city": {
+                        "description": "City",
+                        "type": "string"
+                    },
+                    "street_line1": {
+                        "description": "First line for the address",
+                        "type": "string"
+                    },
+                    "street_line2": {
+                        "description": "Second line for the address",
+                        "type": "string"
+                    },
+                    "post_code": {
+                        "description": "Address post code",
+                        "type": "string"
+                    }
+                }
+            },
+            "TelegramInlineQuery": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Unique identifier for this query",
+                        "type": "string"
+                    },
+                    "TelegramUser": {
+                        "description": "This object represents a Telegram user or bot.",
+                        "type": "object"
+                    },
+                    "from": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "TelegramLocation": {
+                        "description": "This object represents a point on the map.",
+                        "type": "object"
+                    },
+                    "location": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "query": {
+                        "description": "Text of the query (up to 512 characters)",
+                        "type": "string"
+                    },
+                    "offset": {
+                        "description": "Offset of the results to be returned, can be controlled by the bot",
+                        "type": "string"
+                    }
+                }
+            },
+            "TelegramChosenInlineResult": {
+                "type": "object",
+                "properties": {
+                    "result_id": {
+                        "description": "The unique identifier for the result that was chosen",
+                        "type": "string"
+                    },
+                    "TelegramUser": {
+                        "description": "This object represents a Telegram user or bot.",
+                        "type": "object"
+                    },
+                    "from": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "TelegramLocation": {
+                        "description": "This object represents a point on the map.",
+                        "type": "object"
+                    },
+                    "location": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "inline_message_id": {
+                        "description": "Identifier of the sent inline message. Available only if there is an inline keyboard attached to the message. Will be also received in callback queries and can be used to edit the message.",
+                        "type": "string"
+                    },
+                    "query": {
+                        "description": "Text of the query (up to 512 characters)",
+                        "type": "string"
+                    }
+                }
+            },
+            "TelegramCallbackQuery": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Unique identifier for this query",
+                        "type": "string"
+                    },
+                    "TelegramUser": {
+                        "description": "This object represents a Telegram user or bot.",
+                        "type": "object"
+                    },
+                    "from": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "TelegramMessage": {
+                        "description": "This object represents a message.",
+                        "type": "object"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "inline_message_id": {
+                        "description": "Identifier of the sent inline message. Available only if there is an inline keyboard attached to the message. Will be also received in callback queries and can be used to edit the message.",
+                        "type": "string"
+                    },
+                    "chat_instance": {
+                        "description": "Global identifier, uniquely corresponding to the chat to which the message with the callback button was sent. Useful for high scores in games.",
+                        "type": "string"
+                    },
+                    "data": {
+                        "description": "Data associated with the callback button. Be aware that a bad client can send arbitrary data in this field.",
+                        "type": "string"
+                    },
+                    "game_short_name": {
+                        "description": "Short name of a Game to be returned, serves as the unique identifier for the game",
+                        "type": "string"
+                    }
+                }
+            },
+            "TelegramShippingQuery": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Unique identifier for this query",
+                        "type": "string"
+                    },
+                    "TelegramUser": {
+                        "description": "This object represents a Telegram user or bot.",
+                        "type": "object"
+                    },
+                    "from": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "invoice_payload": {
+                        "description": "Bot specified invoice payload",
+                        "type": "string"
+                    },
+                    "TelegramShippingAddress": {
+                        "description": "This object represents a shipping address.",
+                        "type": "object"
+                    },
+                    "shipping_address": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "TelegramPreCheckoutQuery": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Unique identifier for this query",
+                        "type": "string"
+                    },
+                    "TelegramUser": {
+                        "description": "This object represents a Telegram user or bot.",
+                        "type": "object"
+                    },
+                    "from": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "currency": {
+                        "description": "Three-letter ISO 4217 currency code",
+                        "type": "string"
+                    },
+                    "total_amount": {
+                        "description": "Total price in the smallest units of the currency (integer, not float\/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+                        "type": "integer"
+                    },
+                    "invoice_payload": {
+                        "description": "Bot specified invoice payload",
+                        "type": "string"
+                    },
+                    "shipping_option_id": {
+                        "description": "Identifier of the shipping option chosen by the user",
+                        "type": "string"
+                    },
+                    "TelegramOrderInfo": {
+                        "description": "This object represents information about an order.",
+                        "type": "object"
+                    },
+                    "order_info": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "ApiResponse": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "type": {
+                        "description": "Type of the entity. Can be mention (@username), hashtag, bot_command, url, email, bold (bold text), italic (italic text), code (monowidth string), pre (monowidth block), text_link (for clickable text URLs), text_mention (for users without usernames)",
+                        "type": "string"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
