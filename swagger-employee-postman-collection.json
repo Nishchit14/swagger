@@ -1,0 +1,44 @@
+{
+    "id": "dd2a190f1eae265517ea7edc3178bc21",
+    "name": "Swagger Employee",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "8e81654b17f13b23343b43962e1546ad",
+            "name": "Greet user with message",
+            "url": "http:\/\/petstore.swagger.io\/v2\/hello\/{greetMessage}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "greetMessage",
+                    "description": "Greet message",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "dd2a190f1eae265517ea7edc3178bc21",
+            "rawModeData": ""
+        }
+    ]
+}
