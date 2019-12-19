@@ -1,0 +1,37 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Swagger Employee",
+        "description": "This is a sample Hello World.  You can find out more about     Swagger at [http:\/\/swagger.io](http:\/\/swagger.io) or on [irc.freenode.net, #swagger](http:\/\/swagger.io\/irc\/).      For this sample, you can use the api key `special-key` to test the authorization     filters.",
+        "termsOfService": "http:\/\/swagger.io\/terms\/"
+    },
+    "servers": [
+        "http:\/\/petstore.swagger.io\/v2"
+    ],
+    "paths": {
+        "\/hello\/{greetMessage}": {
+            "get": {
+                "summary": "Greet user with message",
+                "description": "",
+                "operationId": "GreetMessage",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "greetMessage",
+                        "in": "path",
+                        "description": "Greet message"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
