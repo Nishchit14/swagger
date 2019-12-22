@@ -1,5 +1,5 @@
 {
-    "id": "5d943bf337596fffd5c0c23d46f73d69",
+    "id": "dfab0893a32a67aaa05fcb4931c7c3ca",
     "name": "Swagger2SampleApiFromJson",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "f795b4a5e6cba8196ed2aa9f85c8a9fb",
+            "id": "c179ad88fec3f14db05c5bfb5f55daa2",
             "name": "Find pet by ID",
             "url": "http:\/\/petstore.swagger.io\/contextJsonV2\/pet\/{petId}",
             "description": "Returns a single pet",
@@ -37,7 +37,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5d943bf337596fffd5c0c23d46f73d69",
+            "collectionId": "dfab0893a32a67aaa05fcb4931c7c3ca",
             "rawModeData": ""
         }
     ]
