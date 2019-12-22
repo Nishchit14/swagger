@@ -1,5 +1,5 @@
 {
-    "id": "dd2a190f1eae265517ea7edc3178bc21",
+    "id": "02717781c7a5150e41145a0ce43f0a1c",
     "name": "Swagger Employee",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "8e81654b17f13b23343b43962e1546ad",
+            "id": "278e5de6746c019a52b0eb39fbd267ad",
             "name": "Greet user with message",
             "url": "http:\/\/petstore.swagger.io\/v2\/hello\/{greetMessage}",
             "description": "",
@@ -37,7 +37,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "dd2a190f1eae265517ea7edc3178bc21",
+            "collectionId": "02717781c7a5150e41145a0ce43f0a1c",
             "rawModeData": ""
         }
     ]
