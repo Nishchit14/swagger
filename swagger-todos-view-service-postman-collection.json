@@ -1,5 +1,5 @@
 {
-    "id": "47002c3ab48e569b44d1a39dc1f66c59",
+    "id": "9d43c6b3ad7fa9e462aef65a6aab3ce4",
     "name": "Swagger Todos View service",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "09c67b137fb95ab40d49312987e09e96",
+            "id": "79d5ce3f0b3054c6160a0e1981aae8d6",
             "name": "View the list of todos",
             "url": "http:\/\/todos.swagger.io\/todos\/",
             "description": "",
@@ -29,7 +29,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "47002c3ab48e569b44d1a39dc1f66c59",
+            "collectionId": "9d43c6b3ad7fa9e462aef65a6aab3ce4",
             "rawModeData": ""
         }
     ]
