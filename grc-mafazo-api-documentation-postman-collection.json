@@ -1,5 +1,5 @@
 {
-    "id": "aa0940de8e36c661ac6c6951bde25f59",
+    "id": "4307f3751327208b8c2250ea69764bdd",
     "name": "GRC Mafazo API Documentation",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "73a07b306924178bc72c42f25eaee131",
+            "id": "e1ea779180d6ac0c86592c33a4e3f32c",
             "name": "Get all systems by query given",
             "url": "http:\/\/petstore.swagger.io\/v2\/systems",
             "description": "",
@@ -44,11 +44,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "collectionId": "4307f3751327208b8c2250ea69764bdd",
             "rawModeData": ""
         },
         {
-            "id": "c7c90d84cb751036da27f8f85c5b89ea",
+            "id": "c730e600c83eff0c9e1ad180a646d9eb",
             "name": "Get the last 10 most recent updated systems",
             "url": "http:\/\/petstore.swagger.io\/v2\/systems\/recentlyModified",
             "description": "",
@@ -67,11 +67,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "collectionId": "4307f3751327208b8c2250ea69764bdd",
             "rawModeData": ""
         },
         {
-            "id": "a9740b311c6b269c9b2f63b2b8ecf4e8",
+            "id": "bb25d70bbace92eadf95ce74c9452025",
             "name": "Get the control level status of the system given",
             "url": "http:\/\/petstore.swagger.io\/v2\/systems\/{name}\/controlLevelStatus",
             "description": "",
@@ -98,11 +98,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "collectionId": "4307f3751327208b8c2250ea69764bdd",
             "rawModeData": ""
         },
         {
-            "id": "863b609a77f4310cb58ef73a304211b0",
+            "id": "78a337adb8e7debcf1928b765baa3f9f",
             "name": "Get the deficiency register of the system given",
             "url": "http:\/\/petstore.swagger.io\/v2\/systems\/{name}\/deficiencyRegister",
             "description": "",
@@ -129,11 +129,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "collectionId": "4307f3751327208b8c2250ea69764bdd",
             "rawModeData": ""
         },
         {
-            "id": "7ec7cc4cccfc568f89c7c785303e1763",
+            "id": "6d2e9d0f4979e5365a6d1876e72a98b3",
             "name": "Get the related assets of the system given",
             "url": "http:\/\/petstore.swagger.io\/v2\/systems\/{name}\/relatedAssests",
             "description": "",
@@ -160,11 +160,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "collectionId": "4307f3751327208b8c2250ea69764bdd",
             "rawModeData": ""
         },
         {
-            "id": "93966a976ca9a5f4b2638b9efb00d0d1",
+            "id": "de907735d38e63618c7d6960d31e6092",
             "name": "Get the related policies of the system given",
             "url": "http:\/\/petstore.swagger.io\/v2\/systems\/{name}\/relatedPolicies",
             "description": "",
@@ -191,11 +191,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "collectionId": "4307f3751327208b8c2250ea69764bdd",
             "rawModeData": ""
         },
         {
-            "id": "531965c65e4843bdf35ddf4ff657da93",
+            "id": "62dc217c1b61a44a309fbf4aedcd4652",
             "name": "Get all vendors by query given",
             "url": "http:\/\/petstore.swagger.io\/v2\/vendors",
             "description": "",
@@ -222,11 +222,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "collectionId": "4307f3751327208b8c2250ea69764bdd",
             "rawModeData": ""
         },
         {
-            "id": "eaa023b7a43bfe602fc7e9606e2630bd",
+            "id": "c3fb38fc2becd7c5df77ca920c1dcd39",
             "name": "Get the last past due vendors",
             "url": "http:\/\/petstore.swagger.io\/v2\/vendors\/pastDue",
             "description": "",
@@ -245,11 +245,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "collectionId": "4307f3751327208b8c2250ea69764bdd",
             "rawModeData": ""
         },
         {
-            "id": "e476d5a9558c46937399bdfc25be4cce",
+            "id": "35338800bbda1e27dec8032b7e549c9e",
             "name": "Get high risk vendors",
             "url": "http:\/\/petstore.swagger.io\/v2\/vendors\/highRisk",
             "description": "",
@@ -268,11 +268,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "collectionId": "4307f3751327208b8c2250ea69764bdd",
             "rawModeData": ""
         },
         {
-            "id": "16ae50a94a4c2201916080a665a24552",
+            "id": "f10fbc6db6eb2bbc3fc3230c2a0a2d87",
             "name": "Get the control level status of the system given",
             "url": "http:\/\/petstore.swagger.io\/v2\/vendors\/{name}",
             "description": "",
@@ -299,11 +299,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "collectionId": "4307f3751327208b8c2250ea69764bdd",
             "rawModeData": ""
         },
         {
-            "id": "930e3c1ea0d6e9314ff5452fae0cc70e",
+            "id": "b0dc6738998a8b8bc8669f7ee6f8165f",
             "name": "Get all documents",
             "url": "http:\/\/petstore.swagger.io\/v2\/documents",
             "description": "",
@@ -322,11 +322,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "collectionId": "4307f3751327208b8c2250ea69764bdd",
             "rawModeData": ""
         },
         {
-            "id": "656df137c1d5aa21bd848d40f0294314",
+            "id": "1d59698db9c2b896678636816fae4463",
             "name": "Get all attached documents",
             "url": "http:\/\/petstore.swagger.io\/v2\/documents\/attached",
             "description": "",
@@ -345,11 +345,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "collectionId": "4307f3751327208b8c2250ea69764bdd",
             "rawModeData": ""
         },
         {
-            "id": "8c60cb42b3a47cde920b44e5e527fe74",
+            "id": "ee7bfbe5c9b25957824a42adb5eb46bc",
             "name": "Get all audits",
             "url": "http:\/\/petstore.swagger.io\/v2\/audits",
             "description": "",
@@ -383,11 +383,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "collectionId": "4307f3751327208b8c2250ea69764bdd",
             "rawModeData": ""
         },
         {
-            "id": "b607ddcdfbef1333bad9bead70cd30ed",
+            "id": "b9236e115bdcb28028480c48cedad092",
             "name": "Get audit with controls",
             "url": "http:\/\/petstore.swagger.io\/v2\/audits\/controls",
             "description": "",
@@ -406,11 +406,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "collectionId": "4307f3751327208b8c2250ea69764bdd",
             "rawModeData": ""
         },
         {
-            "id": "a2d2ea1d1cc7244abf2ba5e0973d39af",
+            "id": "c27ee485b8d5ae0d33e0dfd0c113f3e4",
             "name": "Get audit with deficiencies",
             "url": "http:\/\/petstore.swagger.io\/v2\/audits\/deficiencies",
             "description": "",
@@ -429,7 +429,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aa0940de8e36c661ac6c6951bde25f59",
+            "collectionId": "4307f3751327208b8c2250ea69764bdd",
             "rawModeData": ""
         }
     ]
