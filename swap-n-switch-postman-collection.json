@@ -1,5 +1,5 @@
 {
-    "id": "e35c16671004545a998120ca07b69e46",
+    "id": "c326dd5da9468b641e6354c3b9bef8f4",
     "name": "SWAP n SWITCH",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "78f28393154228f9af624b6214d656f7",
+            "id": "a84fb1a71cabd911758170a08a8310bf",
             "name": "Sign up action",
             "url": "http:\/\/signup.swagger.io\/v2\/user\/signup",
             "description": "",
@@ -29,11 +29,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "collectionId": "c326dd5da9468b641e6354c3b9bef8f4",
             "rawModeData": ""
         },
         {
-            "id": "76d342795633daaeed3f0e960b9163e9",
+            "id": "c70c5ee83cfb27dd6f926de483eecf5f",
             "name": "Gets user into the system",
             "url": "http:\/\/signup.swagger.io\/v2\/user\/login",
             "description": "",
@@ -67,11 +67,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "collectionId": "c326dd5da9468b641e6354c3b9bef8f4",
             "rawModeData": ""
         },
         {
-            "id": "48136bcfb959fe8026c7d61d5b360497",
+            "id": "8f492990c9912360bfab45797fd3a5da",
             "name": "User details",
             "url": "http:\/\/signup.swagger.io\/v2\/user\/id",
             "description": "The ID is on query string",
@@ -98,11 +98,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "collectionId": "c326dd5da9468b641e6354c3b9bef8f4",
             "rawModeData": ""
         },
         {
-            "id": "5ef41f611f5d99538bd364466c7db488",
+            "id": "913fb5a482a181a9b7384396b6e41e65",
             "name": "Return all users list",
             "url": "http:\/\/signup.swagger.io\/v2\/user\/list",
             "description": "When using this method, you will get a list of all users.",
@@ -121,11 +121,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "collectionId": "c326dd5da9468b641e6354c3b9bef8f4",
             "rawModeData": ""
         },
         {
-            "id": "4b5db30a0f7a1ca03a3e6b01bb8fa781",
+            "id": "be4033228b5f44e3d1d7f161925bcf49",
             "name": "Updated user",
             "url": "http:\/\/signup.swagger.io\/v2\/user\/update",
             "description": "Make an updte in information user.",
@@ -152,11 +152,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "collectionId": "c326dd5da9468b641e6354c3b9bef8f4",
             "rawModeData": ""
         },
         {
-            "id": "b1ed8200fec3aa15aa733f9a5efaca22",
+            "id": "1dce2420a90b0f119a4b004444879480",
             "name": "Deletes a user",
             "url": "http:\/\/signup.swagger.io\/v2\/user\/delete",
             "description": "The ID on query String",
@@ -183,11 +183,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "collectionId": "c326dd5da9468b641e6354c3b9bef8f4",
             "rawModeData": ""
         },
         {
-            "id": "e60ccd1739f69e7f7985a36346209303",
+            "id": "8957120ddd3578aed88b5ef3d0f18a69",
             "name": "Show create user page",
             "url": "http:\/\/signup.swagger.io\/v2\/user\/create",
             "description": "",
@@ -206,11 +206,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "collectionId": "c326dd5da9468b641e6354c3b9bef8f4",
             "rawModeData": ""
         },
         {
-            "id": "8c5d714ddbb0df09e86ad629f0588aa0",
+            "id": "5092dfb35b304d2d2d11f2f5094086c9",
             "name": "User details",
             "url": "http:\/\/signup.swagger.io\/v2\/user\/detail\/{id}",
             "description": "The ID is on query string",
@@ -237,11 +237,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "collectionId": "c326dd5da9468b641e6354c3b9bef8f4",
             "rawModeData": ""
         },
         {
-            "id": "dda33a1d25e1ad7203b3981c7d8bace4",
+            "id": "3d9e29421a4e01b1ff3fa6876af42465",
             "name": "Delete a user",
             "url": "http:\/\/signup.swagger.io\/v2\/user\/detail\/{id}",
             "description": "The ID on query String",
@@ -268,11 +268,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "collectionId": "c326dd5da9468b641e6354c3b9bef8f4",
             "rawModeData": ""
         },
         {
-            "id": "e8df0d978e68f297b37a98378c06773f",
+            "id": "9eaef79b57d0f019a062ebb648fa0dfc",
             "name": "Updated user",
             "url": "http:\/\/signup.swagger.io\/v2\/user\/detail\/{id}",
             "description": "Make an updte in information user.",
@@ -299,11 +299,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "collectionId": "c326dd5da9468b641e6354c3b9bef8f4",
             "rawModeData": ""
         },
         {
-            "id": "cbba50205553e1be60ea3ea29ece94e1",
+            "id": "0134fd2b4846833ec521d5d8a213f8d5",
             "name": "Show user edit page",
             "url": "http:\/\/signup.swagger.io\/v2\/user\/detail\/{id}",
             "description": "The ID of user is on query string",
@@ -330,7 +330,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e35c16671004545a998120ca07b69e46",
+            "collectionId": "c326dd5da9468b641e6354c3b9bef8f4",
             "rawModeData": ""
         }
     ]
