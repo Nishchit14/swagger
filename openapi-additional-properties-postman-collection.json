@@ -1,5 +1,5 @@
 {
-    "id": "8add1e6562856a8ad1011825d385e790",
+    "id": "c149e052687cf9559c7b4cbc752e4761",
     "name": "OpenAPI Additional Properties",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "05315a1a711585b29ecca7c27ee51456",
+            "id": "e76d01eaa3724cfd328fface9c8735d1",
             "name": "Add a new User to the store",
             "url": "http:\/\/additional-properties.swagger.io\/v2\/user",
             "description": "",
@@ -29,11 +29,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8add1e6562856a8ad1011825d385e790",
+            "collectionId": "c149e052687cf9559c7b4cbc752e4761",
             "rawModeData": ""
         },
         {
-            "id": "b191e55815b54b996cac8445a2af7512",
+            "id": "8ca9a0ff1ed2555b46a7348c382da55d",
             "name": "Update an existing User",
             "url": "http:\/\/additional-properties.swagger.io\/v2\/user",
             "description": "",
@@ -52,7 +52,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8add1e6562856a8ad1011825d385e790",
+            "collectionId": "c149e052687cf9559c7b4cbc752e4761",
             "rawModeData": ""
         }
     ]
