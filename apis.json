@@ -7,8 +7,8 @@
         "have api",
         "have swagger"
     ],
-    "created": "2019-12-19",
-    "modified": "2019-12-19",
+    "created": "2019-12-21",
+    "modified": "2019-12-21",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -25,8 +25,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/swagger-friendfinder.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/swagger-friendfinder-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/swagger-friendfinder-openapi.json"
                 }
             ]
         },
@@ -43,8 +43,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openapi-additional-properties.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openapi-additional-properties-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/openapi-additional-properties-openapi.json"
                 }
             ]
         },
@@ -61,8 +61,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/-openapi.json"
                 }
             ]
         },
@@ -79,8 +79,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/swagger-todos-view-service.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/swagger-todos-view-service-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/swagger-todos-view-service-openapi.json"
                 }
             ]
         },
@@ -97,8 +97,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/swap-n-switch.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/swap-n-switch-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/swap-n-switch-openapi.json"
                 }
             ]
         },
@@ -115,8 +115,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/grc-mafazo-api-documentation.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/grc-mafazo-api-documentation-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/grc-mafazo-api-documentation-openapi.json"
                 }
             ]
         },
@@ -133,8 +133,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/domain-model.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/domain-model-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/domain-model-openapi.json"
                 }
             ]
         },
@@ -151,8 +151,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/tournment-bot.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/tournment-bot-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/tournment-bot-openapi.json"
                 }
             ]
         },
@@ -169,8 +169,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/swagger2sampleapifromjson.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/swagger2sampleapifromjson-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/swagger2sampleapifromjson-openapi.json"
                 }
             ]
         },
@@ -187,8 +187,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/swagger-employee.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/swagger-employee-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/swagger-employee-openapi.json"
                 }
             ]
         },
@@ -205,8 +205,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/swagger-petstore-v2.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/swagger-petstore-v2-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/swagger-petstore-v2-openapi.json"
                 }
             ]
         },
@@ -223,8 +223,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/swagger-petstore-javier.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/swagger-petstore-javier-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/swagger-petstore-javier-openapi.json"
                 }
             ]
         },
@@ -241,8 +241,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/swagger-petstore-one.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/swagger-petstore-one-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/swagger-petstore-one-openapi.json"
                 }
             ]
         },
@@ -259,8 +259,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/swagger-spring-radio.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/swagger-spring-radio-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/swagger-spring-radio-openapi.json"
                 }
             ]
         },
@@ -277,8 +277,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/dev-api.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/dev-api-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/dev-api-openapi.json"
                 }
             ]
         },
@@ -295,8 +295,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/openapi-petstore.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/openapi-petstore-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/openapi-petstore-openapi.json"
                 }
             ]
         },
@@ -313,8 +313,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/swagger-example-api.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/swagger-example-api-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/swagger-example-api-openapi.json"
                 }
             ]
         },
@@ -331,8 +331,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/petstore-sample-api.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/petstore-sample-api-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/petstore-sample-api-openapi.json"
                 }
             ]
         },
@@ -349,8 +349,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/swagger-petstore.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/swagger-petstore-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/swagger-petstore-openapi.json"
                 }
             ]
         },
@@ -367,14 +367,18 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/swagger-generator.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/swagger-generator-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/swagger\/master\/swagger-generator-openapi.json"
                 }
             ]
         }
     ],
     "include": [],
     "x-common": [
+        {
+            "type": "APIs.json",
+            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
+        },
         {
             "type": "Blog",
             "url": "http:\/\/swagger.io\/blog\/"
